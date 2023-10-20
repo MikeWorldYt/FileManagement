@@ -1,17 +1,22 @@
-<script>
-var iframe = document.getElementById("lvl2");
-var column = document.getElementById("column");
 
-iframe.onload = function() {
-    if (iframe.contentDocument.body.innerHTML === ""){
-        column.style.display = "none";
-    } 
-    else{
-        column.style.display = "block";
-    }
-};
-</script>
+const $ulList = document.getElementById("list");
 
+const $columnDivNotLevel2 = Array.from(
+  document.querySelectorAll(".column")
+).filter((el) => el.id !== "Level2");
+
+
+$ulList.addEventListener("pointerdown", (e) => {
+
+  if (e.target.nodeName === "A") {
+    $columnDivNotLevel2.forEach((el) => {
+      const $iframe = el.querySelector("iframe");
+      if ($iframe !== null) {
+        $iframe.src = "";
+      }
+    });
+  }
+});
 
 
 
