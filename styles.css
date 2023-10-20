@@ -1,0 +1,98 @@
+body {
+    background-color: #005151;
+}
+
+body.box {
+    background-color: #005151;
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 0; 
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: "Myriad Pro", Futura, Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 0; 
+    margin-bottom: 0;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    margin-top: 0; 
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.explorer {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.column {
+    flex: 1;
+    flex-direction: column;
+    background-color: #005151;
+    padding: 10px;
+    border: 1px solid #00A782;
+    border-radius: 5px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 5px 0;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.iframe {
+    flex: 1;
+    width: 100%;
+    min-height: 520px;
+    height: 100%;
+    border: none;
+}
+
+.underline {
+    color: #7EC5B5;
+    text-decoration: underline;
+}
+
+.container.WM {
+    position: absolute; 
+    top: -30px; 
+    right: -20px;
+    z-index: 1;   
+}
+
+.silo {
+    width: 130%; 
+    height: 130%;
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
