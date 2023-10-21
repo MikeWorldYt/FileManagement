@@ -35,6 +35,17 @@ a {
     color: inherit; 
 }
 
+.head {
+    flex: 1;
+    position: relative;
+}
+
+.head.float {
+    position: absolute;
+    top: 0px;
+    right: 2px;
+}
+
 .flags {
 	width: 75px;
 	display: flex;
