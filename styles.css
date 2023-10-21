@@ -95,6 +95,10 @@ li:last-child {
     border-bottom: none;
 }
 
+li:hover {
+    background: #004d4d;
+}
+
 .iframe {
     flex: 1;
     width: 100%;
