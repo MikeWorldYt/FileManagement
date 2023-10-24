@@ -1,7 +1,11 @@
-async function getDirectory(){ 
-  let res=await fetch("./index.json")
-  let directory=await res.json()
-  console.log(directory)
-}
+var iframe = document.getElementById("lvl2");
+var column = document.getElementById("column");
 
-getDirectory()
+iframe.onload = function() {
+    if (iframe.contentDocument.body.innerHTML === ""){
+        column.style.display = "none";
+    } 
+    else{
+        column.style.display = "block";
+    }
+};
