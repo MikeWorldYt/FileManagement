@@ -1,28 +1,82 @@
+const $ulList = document.getElementById("list");
+const $level2 = document.getElementById("Level2");
+$ulList.addEventListener("pointerdown", async (e) => {
+    // Esto es una condicional, su parámetro recibe una condición, si esa condición se cumple, se evaluara el bloque de código, sino lo hace, este se ignorara.
+    if (e.target.matches("[data-directory]")) {
+    let element = e.target;
+    // Aquí obtendremos el nombre del level
+    let name = element.textContent;
+    // Aquí obtendremos el contenido HTML
+    let contentHTML = null;
+    // Obtenemos todo el level json
+    let directory = await getJSON();
+    // Aquí lo que haremos es obtener los valores del level, si no hay mas niveles devolveremos un array vació
+    let keys = Object.keys(directory[element.dataset.directory] || []);
+    // Esto es una condicional, si el array esta vació haremos esto
+    if (keys.length === 0) {
+    contentHTML = createError(name);
+    } else {
+      // Y si no, haremos esto
+    contentHTML = createListDirectory(keys, name);
+    }
+    if (
+    $level2.firstElementChild === null ||
+    $level2.firstElementChild.dataset.directory !== element.dataset.directory
+    ) {
+      // Aquí eliminaremos todos los hijos anteriores
+        $level2.innerHTML = "";
+      // Aquí introduciremos el contenido HTML
+      // La función obtiene dos parámetros el lugar donde introducir el html, y el html en cuestión.
+        $level2.insertAdjacentElement("afterbegin", contentHTML);
+      // Aquí haremos que el primer hijo tenga un data attribute con el nombre del directorio.
+        $level2.firstElementChild.dataset.directory = element.dataset.directory;
+    }
+}
+});
+
+
+function createListDirectory(keys, name) {
+    // Esto crea un elemento del DOM, document.createElement 
+    //espera un parámetro, este parámetro es la etiqueta que quieres crear.
+    const $ul = document.createElement("ul");
+    const $h2 = document.createElement("h2");
+    $h2.textContent = name;
+    // Esto es para crear un data attribute.
+    $ul.dataset.directory = "";
+    // Esta función hace que cualquier nodo se pueda convertir en hijo de la etiqueta ul.
+    $ul.append(
+    $h2,
+      // Recorremos la lista que mandamos y la desestructuramos.
+        ...keys.map((e, index) => {
+        const $li = document.createElement("li");
+        $li.textContent = `${e}`;
+        $li.dataset.directory = e;
+        return $li;
+    })
+    );
+    // Retornamos un valor
+    return $ul;
+}
+
+function createError(name) {
+    const $div = document.createElement("div");
+    $div.dataset.directory = "";
+    $div.innerHTML = `
+        <h2>${name}</h2>
+            <p>This content doesn't exist yet. If you have an idea, please contact me</p>
+            <ul>
+            <li><a class="underline" href="https://www.linkedin.com/in/mikeworldyt/" target="_blank" >LinkedIn</a></li>
+            <li><a class="underline" href="https://www.instagram.com/mikeworldyt/" target="_blank" >Instagram</a></li>
+            <li>Discord = MikeWorldYt#5794</li>
+            <li>eMail = mikeworldyt@gmail.com</li>
+            </ul>`;
+    return $div;
+}
+
 async function getJSON() { 
     let res = await fetch("./index.JSON");
     let directory = await res.json();
-    console.log(directory);
+    return directory;
 }
 
-getJSON()
-function createListDirectory(keys) {
-    const $ul = document.createElement("ul");
-    $ul.append()
-}
 
-const ColumnFill = document.getElementById(Level2).innerHTML="ul";
-console.log(ColumnFill);
-
-
-
-// var iframe = document.getElementById("lvl2");
-// var column = document.getElementById("column");
-
-//iframe.onload = function() {
-//    if (iframe.contentDocument.body.innerHTML === ""){
-//        column.style.display = "none";
-//    } 
-//    else{
-//        column.style.display = "block";
-//    }
-//};
