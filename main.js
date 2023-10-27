@@ -74,7 +74,7 @@ function createError(name) {
 }
 
 async function getJSON() { 
-    let res = await fetch("./index.JSON");
+    let res = await fetch("./structure.JSON");
     let directory = await res.json();
     return directory;
 }
