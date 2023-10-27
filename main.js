@@ -5,6 +5,8 @@ $ulList.addEventListener("pointerdown", async (e) => {
     if (e.target.matches("[data-directory]")) {
     let element = e.target;
     // Aquí obtendremos el nombre del level
+    // Array.from($ulList.children).forEach(el=> el.classList.remove("focus"));
+    // element.classList.add("focus");
     let name = element.textContent;
     // Aquí obtendremos el contenido HTML
     let contentHTML = null;
