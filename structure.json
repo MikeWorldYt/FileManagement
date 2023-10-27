@@ -1,16 +1,16 @@
 {
     "Personal": {
-        "📁 01.Family": {
+        "01.Family": {
             "Documents": {},
             "Media": {},
             "Pets": {}
         },
-        "📁 02.Friends": {
+        "02.Friends": {
             "Memories": {},
             "Meets": {},
             "Travels": {}
         },
-        "📁 03.Documents": {
+        "03.Documents": {
             "Bank": {},
             "Health": {},
             "Oficials": {
@@ -22,8 +22,8 @@
             "University": {},
             "Certificates": {}
         },
-        "Finance": {},
-        "Review": {}
+        "04.Finance": {},
+        "05.Review": {}
     },
     "Work": {
         "Photography":{

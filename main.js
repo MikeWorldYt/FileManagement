@@ -49,7 +49,9 @@ function createListDirectory(keys, name) {
       // Recorremos la lista que mandamos y la desestructuramos.
         ...keys.map((e, index) => {
         const $li = document.createElement("li");
-        $li.textContent = `${e}`;
+        const $button = document.createElement("button");
+        $button.textContent = `📁 ${e}`;
+        $li.append($button)
         $li.dataset.directory = e;
         return $li;
     })
