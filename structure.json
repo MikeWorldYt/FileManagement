@@ -1,0 +1,98 @@
+{
+    "Personal": {
+        "📁 Family": {
+            "Documents": {},
+            "Media": {},
+            "Pets": {}
+        },
+        "Friends": {
+            "Memories": {},
+            "Meets": {},
+            "Travels": {}
+        },
+        "Documents": {
+            "Bank": {},
+            "Health": {},
+            "Oficials": {
+                "TAX_08AUG_Individual-Income.pdf": {}
+            },
+            "Legals": {
+                "LGL_22-03-15_deed-Ellis-St.pdf":{}
+            },
+            "University": {},
+            "Certificates": {}
+        },
+        "Finance": {},
+        "Review": {}
+    },
+    "Work": {
+        "Photography":{
+            "RawFootage":{}
+        },
+        "VideoEdition":{
+            "Finnisheds":{},
+            "RonWatson":{},
+            "YouTubeEdits":{
+                "PRJ_04-19-Ron-NewYork":{},
+                "PRJ_04-22-TutoDirectoryStructure":{}
+            },
+            "PRJ_04-18-SamsWeddings":{},
+            "PRJ_04-22-TutoSamsWedding":{}
+        },
+        "Archive":{},
+        "Review": {}
+    },
+    "Projects": {
+        "Photography":{},
+        "VideoEdition":{},
+        "YouTube":{},
+        "LivingRoom-Makeover": {},
+        "Archive":{},
+        "Review": {}
+    },
+    "Academic": {
+        "Lenguage":{},
+        "ForeignLenguage":{},
+        "Math":{},
+        "Ethical":{},
+        "Science":{},
+        "GraphicDesign":{},
+        "Develoment":{},
+        "Music":{},
+        "Archive":{},
+        "Review": {}
+    },
+    "Hobbies": {
+        "SocialMedia": {
+            "Discord": {},
+            "Instagram": {},
+            "TikTok": {},
+            "YouTube": {},
+            "Vlog": {}
+        },
+        "Literature": {},
+        "Gaming": {},
+        "Art": {},
+        "Review": {}
+    },
+    "Resources": {
+        "Work": {},
+        "Projects": {},
+        "Academic": {},
+        "Documents(shortcut)": {},
+        "Review": {}
+    },
+    "Review": {
+        "Dowlands": {},
+        "Personal(shortcut)": {},
+        "Work(shortcut)": {},
+        "Projects(shortcut)": {},
+        "Academic(shortcut)": {},
+        "Hobbies(shortcut)": {},
+        "Resources(shortcut)": {}
+    },
+    "Settings": {
+        "Icons":{},
+        "Wallpapers":{}
+    }
+}
