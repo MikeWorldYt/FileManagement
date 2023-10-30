@@ -75,13 +75,19 @@
         "Review": {}
     },
  "Resources": {
-        "902.Work": {},
-        "903.Projects": {},
-        "904.Academic": {},
+        "91.Customization": {},
+        "92.Maintenance": {},
+        "93.Applicattion": {
+            "InsertNameProgram":{
+                "PlugIns":{},
+                "Scripts":{}
+         }
+        },
+        "94.Hardware": {},
         "Documents(shortcut)": {}
     },
  "Review": {
-        "980Dowlands": {},
+        "980.Dowlands(shortcut)": {},
         "981.Personal(shortcut)": {},
         "982.Work(shortcut)": {},
         "983.Projects(shortcut)": {},
