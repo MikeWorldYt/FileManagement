@@ -1,6 +1,6 @@
 const $ulList = document.getElementById("list");
 const $level2 = document.getElementById("Level2");
-$ulList.addEventListener("pointerdo0wn", async (e) => {
+$ulList.addEventListener("pointerdown", async (e) => {
     // Esto es una condicional, su parámetro recibe una condición, si esa condición se cumple, se evaluara el bloque de código, sino lo hace, este se ignorara.
     if (e.target.matches("[data-directory]")) {
     let element = e.target;
