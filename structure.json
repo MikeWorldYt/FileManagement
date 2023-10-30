@@ -1,5 +1,5 @@
 {
-    "Personal": {
+ "Personal": {
         "01.Family": {
             "Documents": {},
             "Media": {},
@@ -51,15 +51,15 @@
         "Review": {}
     },
     "Academic": {
-        "Lenguage":{},
-        "ForeignLenguage":{},
-        "Math":{},
-        "Ethical":{},
-        "Science":{},
-        "GraphicDesign":{},
-        "Develoment":{},
-        "Music":{},
-        "Archive":{},
+        "01.Lenguage":{},
+        "02.ForeignLenguage":{},
+        "03.Math":{},
+        "04.Ethical":{},
+        "05.Science":{},
+        "06.GraphicDesign":{},
+        "07.Develoment":{},
+        "08.Music":{},
+        "09.Archive":{},
         "Review": {}
     },
     "Hobbies": {
