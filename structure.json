@@ -87,6 +87,14 @@
         "90.Resources":{},
         "98.Review": {}
     },
+"Review": {
+        "980.Dowlands(shortcut)": {},
+        "981.Personal(shortcut)": {},
+        "982.Work(shortcut)": {},
+        "983.Projects(shortcut)": {},
+        "984.Academic(shortcut)": {},
+        "985.Hobbies(shortcut)": {}
+    },
 "Resources": {
         "91.Customization": {},
         "92.Maintenance": {},
@@ -97,14 +105,6 @@
             }
         },
         "94.Hardware": {}
-    },
-"Review": {
-        "980.Dowlands(shortcut)": {},
-        "981.Personal(shortcut)": {},
-        "982.Work(shortcut)": {},
-        "983.Projects(shortcut)": {},
-        "984.Academic(shortcut)": {},
-        "985.Hobbies(shortcut)": {}
     },
 "Settings": {
         "Icons":{},
