@@ -1,5 +1,5 @@
 {
- "Personal": {
+"Personal": {
         "01.Family": {
             "Documents": {},
             "Media": {},
@@ -23,7 +23,8 @@
             "Certificates": {}
         },
         "04.Finance": {},
-        "05.Review": {}
+        "90.Resources":{},
+        "98.Review": {}
     },
 "Work": {
         "01.Photography":{
@@ -39,9 +40,10 @@
             "PRJ_04-18-SamsWeddings":{},
             "PRJ_04-22-TutoSamsWedding":{}
         },
+        "90.Resources":{},
         "98.Review": {}
     },
- "Projects": {
+"Projects": {
         "Photography":{},
         "VideoEdition":{},
         "YouTube":{},
@@ -49,7 +51,7 @@
         "Archive":{},
         "Review": {}
     },
- "Academic": {
+"Academic": {
         "01.Lenguage":{},
         "02.ForeignLenguage":{},
         "03.Math":{},
@@ -59,9 +61,10 @@
         "07.Develoment":{},
         "08.Music":{},
         "09.Archive":{},
+        "90.Resources":{},
         "98.Review": {}
     },
- "Hobbies": {
+"Hobbies": {
         "SocialMedia": {
             "Discord": {},
             "Instagram": {},
@@ -72,21 +75,21 @@
         "Literature": {},
         "Gaming": {},
         "Art": {},
+        "90.Resources":{},
         "Review": {}
     },
- "Resources": {
+"Resources": {
         "91.Customization": {},
         "92.Maintenance": {},
         "93.Applicattion": {
             "InsertNameProgram":{
                 "PlugIns":{},
                 "Scripts":{}
-         }
+            }
         },
-        "94.Hardware": {},
-        "Documents(shortcut)": {}
+        "94.Hardware": {}
     },
- "Review": {
+"Review": {
         "980.Dowlands(shortcut)": {},
         "981.Personal(shortcut)": {},
         "982.Work(shortcut)": {},
@@ -94,7 +97,7 @@
         "984.Academic(shortcut)": {},
         "985.Hobbies(shortcut)": {}
     },
- "Settings": {
+"Settings": {
         "Icons":{},
         "Wallpapers":{}
     }
