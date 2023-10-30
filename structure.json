@@ -25,11 +25,11 @@
         "04.Finance": {},
         "05.Review": {}
     },
-    "Work": {
-        "Photography":{
+"Work": {
+        "01.Photography":{
             "RawFootage":{}
         },
-        "VideoEdition":{
+        "02.VideoEdition":{
             "Finnisheds":{},
             "RonWatson":{},
             "YouTubeEdits":{
@@ -39,10 +39,9 @@
             "PRJ_04-18-SamsWeddings":{},
             "PRJ_04-22-TutoSamsWedding":{}
         },
-        "Archive":{},
-        "Review": {}
+        "98.Review": {}
     },
-    "Projects": {
+ "Projects": {
         "Photography":{},
         "VideoEdition":{},
         "YouTube":{},
@@ -50,7 +49,7 @@
         "Archive":{},
         "Review": {}
     },
-    "Academic": {
+ "Academic": {
         "01.Lenguage":{},
         "02.ForeignLenguage":{},
         "03.Math":{},
@@ -60,9 +59,9 @@
         "07.Develoment":{},
         "08.Music":{},
         "09.Archive":{},
-        "Review": {}
+        "98.Review": {}
     },
-    "Hobbies": {
+ "Hobbies": {
         "SocialMedia": {
             "Discord": {},
             "Instagram": {},
@@ -75,23 +74,21 @@
         "Art": {},
         "Review": {}
     },
-    "Resources": {
-        "Work": {},
-        "Projects": {},
-        "Academic": {},
-        "Documents(shortcut)": {},
-        "Review": {}
+ "Resources": {
+        "902.Work": {},
+        "903.Projects": {},
+        "904.Academic": {},
+        "Documents(shortcut)": {}
     },
-    "Review": {
-        "Dowlands": {},
-        "Personal(shortcut)": {},
-        "Work(shortcut)": {},
-        "Projects(shortcut)": {},
-        "Academic(shortcut)": {},
-        "Hobbies(shortcut)": {},
-        "Resources(shortcut)": {}
+ "Review": {
+        "980Dowlands": {},
+        "981.Personal(shortcut)": {},
+        "982.Work(shortcut)": {},
+        "983.Projects(shortcut)": {},
+        "984.Academic(shortcut)": {},
+        "985.Hobbies(shortcut)": {}
     },
-    "Settings": {
+ "Settings": {
         "Icons":{},
         "Wallpapers":{}
     }
