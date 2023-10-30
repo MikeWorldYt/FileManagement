@@ -23,11 +23,19 @@
             "Certificates": {}
         },
         "04.Finance": {},
+        "05.SocialMedia": {
+            "Discord": {},
+            "Instagram": {},
+            "TikTok": {},
+            "YouTube": {},
+            "Vlog": {}
+        },
         "90.Resources":{},
         "98.Review": {}
     },
 "Work": {
-        "01.Photography":{
+        "01.Local Bussiness":{},
+        "02.Photography":{
             "RawFootage":{}
         },
         "02.VideoEdition":{
@@ -40,6 +48,7 @@
             "PRJ_04-18-SamsWeddings":{},
             "PRJ_04-22-TutoSamsWedding":{}
         },
+        "03.MusicProduction": {},
         "90.Resources":{},
         "98.Review": {}
     },
@@ -65,18 +74,18 @@
         "98.Review": {}
     },
 "Hobbies": {
-        "SocialMedia": {
-            "Discord": {},
-            "Instagram": {},
-            "TikTok": {},
-            "YouTube": {},
-            "Vlog": {}
+        "01.Art": {},
+        "02.Gaming": {
+            "01.Chess": {},
+            "02.Gamig": {}
         },
-        "Literature": {},
-        "Gaming": {},
-        "Art": {},
+        "03.Memes": {},
+        "04.Music": {},
+        "05.Blog-Podcast": {},
+        "06.eBooks": {},
+        "07.Recipes": {},
         "90.Resources":{},
-        "Review": {}
+        "98.Review": {}
     },
 "Resources": {
         "91.Customization": {},
