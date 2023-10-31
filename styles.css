@@ -87,6 +87,16 @@ a {
     visibility: hidden;
 }
 
+.win-scale {
+    animation: scale-up-top-left 0.5s;
+    animation-delay: 2s;}
+    @keyframes scale-up-top-left
+    {0%
+    {transform:scale(.5);transform-origin:top left}
+    100%{transform:scale(1);transform-origin:top left}
+    
+}
+
 ul {
     list-style-type: none;
     padding: 0;

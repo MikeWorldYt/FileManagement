@@ -12,8 +12,19 @@ function setColumnTransparent() {
     }
   })
 }
-
 setColumnTransparent();
+
+function windowAnimation() {
+  $columns.forEach((column)=>{
+    if(column.children.length === 0){
+      column.classList.remove("win-scale");
+    }
+    if(column.children.length !=0){
+      column.classList.add("win-scale");
+    }
+  })
+}
+windowAnimation();
 
 $ulList.addEventListener("pointerdown", async (e) => {
     // Esto es una condicional, su parámetro recibe una condición, si esa condición se cumple, se evaluara el bloque de código, sino lo hace, este se ignorara.
@@ -23,19 +34,17 @@ $ulList.addEventListener("pointerdown", async (e) => {
     // Array.from($ulList.children).forEach(el=> el.classList.remove("focus"));
     // element.classList.add("focus");
     let name = element.textContent;
-    // Aquí obtendremos el contenido HTML
     let contentHTML = null;
     // Obtenemos todo el level json
     let directory = await getJSON();
     // Aquí lo que haremos es obtener los valores del level, si no hay mas niveles devolveremos un array vació
     let keys = Object.keys(directory[element.dataset.directory] || []);
-    // Esto es una condicional, si el array esta vació haremos esto
-    if (keys.length === 0) {
-    contentHTML = createError(name);
-    } else {
-      // Y si no, haremos esto
-    contentHTML = createListDirectory(keys, name);
-    }
+      if (keys.length === 0) {
+      contentHTML = createError(name);
+      }
+      else {
+      contentHTML = createListDirectory(keys, name);
+      }
     if (
     $level2.firstElementChild === null ||
     $level2.firstElementChild.dataset.directory !== element.dataset.directory
@@ -49,13 +58,13 @@ $ulList.addEventListener("pointerdown", async (e) => {
         $level2.firstElementChild.dataset.directory = element.dataset.directory;
     }
     setColumnTransparent()
+    // windowAnimation();
 }
 });
 
-
+// Crear el directorio
 function createListDirectory(keys, name) {
-    // Esto crea un elemento del DOM, document.createElement 
-    //espera un parámetro, este parámetro es la etiqueta que quieres crear.
+    // Esto crea un elemento del DOM "document.createElement" 
     const $ul = document.createElement("ul");
     const $h2 = document.createElement("h2");
     $h2.textContent = name;
@@ -64,7 +73,6 @@ function createListDirectory(keys, name) {
     // Esta función hace que cualquier nodo se pueda convertir en hijo de la etiqueta ul.
     $ul.append(
     $h2,
-      // Recorremos la lista que mandamos y la desestructuramos.
         ...keys.map((e, index) => {
         const $li = document.createElement("li");
         const $button = document.createElement("button");
@@ -74,10 +82,10 @@ function createListDirectory(keys, name) {
         return $li;
     })
     );
-    // Retornamos un valor
     return $ul;
 }
 
+// Comprobar si el directorio esta vacio
 function createError(name) {
     const $div = document.createElement("div");
     $div.dataset.directory = "";
