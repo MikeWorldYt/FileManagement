@@ -1,13 +1,11 @@
 const $ulList = document.getElementById("list");
 const $level2 = document.getElementById("Level2");
-const $columns = document.querySelectorAll("column");
+const $columns = document.querySelectorAll(".column");
 
 function setColumnTransparent() {
-  console.log("se cargo");
   $columns.forEach((column)=>{
     if(column.children.length === 0){
       column.classList.add("hidden");
-      
     }
     if(column.children.length !=0){
       column.classList.remove("hidden");
