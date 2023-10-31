@@ -1,5 +1,22 @@
 const $ulList = document.getElementById("list");
 const $level2 = document.getElementById("Level2");
+const $columns = document.querySelectorAll("column");
+
+function setColumnTransparent() {
+  console.log("se cargo");
+  $columns.forEach((column)=>{
+    if(column.children.length === 0){
+      column.classList.add("hidden");
+      
+    }
+    if(column.children.length !=0){
+      column.classList.remove("hidden");
+    }
+  })
+}
+
+setColumnTransparent();
+
 $ulList.addEventListener("pointerdown", async (e) => {
     // Esto es una condicional, su parámetro recibe una condición, si esa condición se cumple, se evaluara el bloque de código, sino lo hace, este se ignorara.
     if (e.target.matches("[data-directory]")) {
@@ -33,6 +50,7 @@ $ulList.addEventListener("pointerdown", async (e) => {
       // Aquí haremos que el primer hijo tenga un data attribute con el nombre del directorio.
         $level2.firstElementChild.dataset.directory = element.dataset.directory;
     }
+    setColumnTransparent()
 }
 });
 
