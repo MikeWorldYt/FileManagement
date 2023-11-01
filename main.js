@@ -1,5 +1,11 @@
-const $ulList = document.getElementById("list");
-const $level2 = document.getElementById("Level2");
+async function getJSON() { 
+  let res = await fetch("https://mikeworldyt.github.io/DirectoryStructurePC.github.io/structure.json");
+  let directory = await res.json();
+  return directory;
+}
+
+const $ulList = document.querySelector("#list");
+const $level2 = document.querySelector("#Level2");
 const $columns = document.querySelectorAll(".column");
 
 function setColumnTransparent() {
@@ -9,62 +15,41 @@ function setColumnTransparent() {
     }
     if(column.children.length !=0){
       column.classList.remove("hidden");
+      column.classList.add("win-scale");
     }
   })
 }
 setColumnTransparent();
 
-function windowAnimation() {
-  $columns.forEach((column)=>{
-    if(column.children.length === 0){
-      column.classList.remove("win-scale");
-    }
-    if(column.children.length !=0){
-      column.classList.add("win-scale");
-    }
-  })
-}
-windowAnimation();
-
 $ulList.addEventListener("pointerdown", async (e) => {
-    // Esto es una condicional, su parámetro recibe una condición, si esa condición se cumple, se evaluara el bloque de código, sino lo hace, este se ignorara.
-    if (e.target.matches("[data-directory]")) {
-    let element = e.target;
-    // Aquí obtendremos el nombre del level
+  // condición, si esa condición se cumple, se evaluara el bloque de código, sino lo hace, este se ignorara.
+  if (e.target.matches("[data-directory]")) {
+    let element = e.target; // Aquí obtendremos el nombre del level
     // Array.from($ulList.children).forEach(el=> el.classList.remove("focus"));
     // element.classList.add("focus");
     let name = element.textContent;
     let contentHTML = null;
-    // Obtenemos todo el level json
-    let directory = await getJSON();
-    // Aquí lo que haremos es obtener los valores del level, si no hay mas niveles devolveremos un array vació
-    let keys = Object.keys(directory[element.dataset.directory] || []);
+    let directory = await getJSON(); // Obtenemos todo el level json
+    let keys = Object.keys(directory[element.dataset.directory] || []); // all values
       if (keys.length === 0) {
-      contentHTML = createError(name);
+        contentHTML = createError(name);
       }
       else {
-      contentHTML = createListDirectory(keys, name);
+        contentHTML = createListDirectory(keys, name);
       }
-    if (
-    $level2.firstElementChild === null ||
-    $level2.firstElementChild.dataset.directory !== element.dataset.directory
-    ) {
-      // Aquí eliminaremos todos los hijos anteriores
-        $level2.innerHTML = "";
-      // Aquí introduciremos el contenido HTML
-      // La función obtiene dos parámetros el lugar donde introducir el html, y el html en cuestión.
-        $level2.insertAdjacentElement("afterbegin", contentHTML);
-      // Aquí haremos que el primer hijo tenga un data attribute con el nombre del directorio.
-        $level2.firstElementChild.dataset.directory = element.dataset.directory;
-    }
+      if (
+      $level2.firstElementChild === null ||
+      $level2.firstElementChild.dataset.directory !== element.dataset.directory) {
+        $level2.innerHTML = ""; // inner HTML
+        $level2.insertAdjacentElement("afterbegin", contentHTML); // PARAMETROS:donde introducir el HTML, contentHTML
+        $level2.firstElementChild.dataset.directory = element.dataset.directory; // tenga un data-attribute con el nombre del directorio.
+      }
     setColumnTransparent()
-    // windowAnimation();
-}
-});
+  }
+  });
 
 // Crear el directorio
 function createListDirectory(keys, name) {
-    // Esto crea un elemento del DOM "document.createElement" 
     const $ul = document.createElement("ul");
     const $h2 = document.createElement("h2");
     $h2.textContent = name;
@@ -101,9 +86,5 @@ function createError(name) {
     return $div;
 }
 
-async function getJSON() { 
-    let res = await fetch("https://mikeworldyt.github.io/DirectoryStructurePC.github.io/structure.json");
-    let directory = await res.json();
-    return directory;
-}
+
 
