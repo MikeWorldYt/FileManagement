@@ -3,10 +3,6 @@ body {
     background-size: cover; 
 }
 
-body.box {
-    background-color: #005151;
-}
-
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
@@ -124,7 +120,7 @@ button {
 }
 
 button:hover {
-    background: #578d8d9a;
+    background: #96969628;
 }
 
 .iframe {
