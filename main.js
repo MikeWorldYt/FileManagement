@@ -22,31 +22,32 @@ function setColumnTransparent() {
 setColumnTransparent();
 
 $ulList.addEventListener("pointerdown", async (e) => {
-  // condición, si esa condición se cumple, se evaluara el bloque de código, sino lo hace, este se ignorara.
+  // Si el elemento apuntado tiene un atributo data-directory
   if (e.target.matches("[data-directory]")) {
-    let element = e.target; // Aquí obtendremos el nombre del level
+    const element = e.target; // Aquí obtendremos el nombre del level
     // Array.from($ulList.children).forEach(el=> el.classList.remove("focus"));
     // element.classList.add("focus");
-    let name = element.textContent;
+    const name = element.textContent;
     let contentHTML = null;
-    let directory = await getJSON(); // Obtenemos todo el level json
-    let keys = Object.keys(directory[element.dataset.directory] || []); // all values
+    const directory = await getJSON(); // Obtenemos todo el level JSON
+    const keys = Object.keys(directory[element.dataset.directory] || []); // all values
       if (keys.length === 0) {
         contentHTML = createError(name);
       }
       else {
         contentHTML = createListDirectory(keys, name);
       }
-      if (
-      $level2.firstElementChild === null ||
+      if ( // Si no hay ningún elemento hijo o si el data-directory no coincide
+      !$level2.firstElementChild ||
       $level2.firstElementChild.dataset.directory !== element.dataset.directory) {
         $level2.innerHTML = ""; // inner HTML
         $level2.insertAdjacentElement("afterbegin", contentHTML); // PARAMETROS:donde introducir el HTML, contentHTML
-        $level2.firstElementChild.dataset.directory = element.dataset.directory; // tenga un data-attribute con el nombre del directorio.
+        $level2.firstElementChild.dataset.directory = element.dataset.directory;
       }
     setColumnTransparent()
   }
 });
+
 
 // Crear el directorio
     const $ul = document.createElement("ul");
@@ -89,6 +90,4 @@ function createError(name) {
             </ul>`;
     return $div;
 }
-
-
 

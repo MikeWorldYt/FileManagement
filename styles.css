@@ -41,6 +41,7 @@ a {
     position: absolute;
     top: 0px;
     right: 2px;
+    z-index: 1; 
 }
 
 .flags {
@@ -140,7 +141,7 @@ button:hover {
     position: absolute; 
     top: -30px; 
     right: -20px;
-    z-index: 1;   
+ 
 }
 
 .silo {
