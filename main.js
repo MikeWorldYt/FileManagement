@@ -22,15 +22,13 @@ function setColumnTransparent() {
 setColumnTransparent();
 
 $ulList.addEventListener("pointerdown", async (e) => {
-  // Si el elemento apuntado tiene un atributo data-directory
-  if (e.target.matches("[data-directory]")) {
+    if (e.target.matches("[data-directory]")) { // Si el elemento tiene un data-directory
     const element = e.target; // Aquí obtendremos el nombre del level
     // Array.from($ulList.children).forEach(el=> el.classList.remove("focus"));
     // element.classList.add("focus");
     const name = element.textContent;
-    let contentHTML = null;
     const directory = await getJSON(); // Obtenemos todo el level JSON
-    const keys = Object.keys(directory[element.dataset.directory] || []); // all values
+    const keys = Object.keys(directory[element.dataset.directory] || []);
       if (keys.length === 0) {
         contentHTML = createError(name);
       }
@@ -40,7 +38,6 @@ $ulList.addEventListener("pointerdown", async (e) => {
       if ( // Si no hay ningún elemento hijo o si el data-directory no coincide
       !$level2.firstElementChild ||
       $level2.firstElementChild.dataset.directory !== element.dataset.directory) {
-        $level2.innerHTML = ""; // inner HTML
         $level2.insertAdjacentElement("afterbegin", contentHTML); // PARAMETROS:donde introducir el HTML, contentHTML
         $level2.firstElementChild.dataset.directory = element.dataset.directory;
       }
@@ -58,10 +55,8 @@ $button2.textContent = `📁 98.Review`
 function createListDirectory(keys, name) {
     $ul.innerHTML = `` 
     $h2.textContent = name;
-    // Esto es para crear un data attribute.
-    $ul.dataset.directory = "";
-    // Esta función hace que cualquier nodo se pueda convertir en hijo de la etiqueta ul.
-    $ul.append(
+    $ul.dataset.directory = ""; // Esto es para crear un data attribute.
+    $ul.append( // el nodo se convierte en hijo de ul
     $h2,
         ...keys.map((e, index) => {
         const $li = document.createElement("li");
