@@ -46,7 +46,7 @@ $ulList.addEventListener("pointerdown", async (e) => {
       }
     setColumnTransparent()
   }
-  });
+});
 
 // Crear el directorio
 function createListDirectory(keys, name) {
