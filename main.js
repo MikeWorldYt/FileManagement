@@ -21,6 +21,7 @@ function setColumnTransparent() {
 }
 setColumnTransparent();
 
+// Pintar columna del level 2
 $ulList.addEventListener("pointerdown", async (e) => {
     if (e.target.matches("[data-directory]")) { // Si el elemento tiene un data-directory
     const element = e.target; // Aquí obtendremos el nombre del level
@@ -38,12 +39,17 @@ $ulList.addEventListener("pointerdown", async (e) => {
       if ( // Si no hay ningún elemento hijo o si el data-directory no coincide
       !$level2.firstElementChild ||
       $level2.firstElementChild.dataset.directory !== element.dataset.directory) {
-        $level2.insertAdjacentElement("afterbegin", contentHTML); // PARAMETROS:donde introducir el HTML, contentHTML
+        $level2.insertAdjacentElement("afterbegin", contentHTML); // Limpiar contenido anterior
         $level2.firstElementChild.dataset.directory = element.dataset.directory;
       }
     setColumnTransparent()
   }
 });
+
+// Pintar columna del level 3
+const $level3 = document.querySelectorAll("#Lvl2")
+
+// ! crear funcion
 
 
 // Crear el directorio
@@ -64,6 +70,7 @@ function createListDirectory(keys, name) {
         $button.textContent = `📁 ${e}`;
         $li.append($button)
         $li.dataset.directory = e;
+        $li.classList.add("Lv2"); // Agregar la clase "Col2" al elemento li
         return $li;
     }),
     $button2);
