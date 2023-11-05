@@ -1,5 +1,5 @@
 async function getJSON() { 
-  let res = await fetch("https://mikeworldyt.github.io/DirectoryStructurePC.github.io/structure.json");
+  let res = await fetch("https://mikeworldyt.github.io/FileManagement/structure.json");
   let directory = await res.json();
   return directory;
 }
