@@ -49,9 +49,13 @@ $ulList.addEventListener("pointerdown", async (e) => {
 });
 
 // Crear el directorio
-function createListDirectory(keys, name) {
     const $ul = document.createElement("ul");
     const $h2 = document.createElement("h2");
+    const $button2 = document.createElement("button");
+$button2.textContent = `📁 98.Review`
+
+function createListDirectory(keys, name) {
+    $ul.innerHTML = `` 
     $h2.textContent = name;
     // Esto es para crear un data attribute.
     $ul.dataset.directory = "";
@@ -65,8 +69,8 @@ function createListDirectory(keys, name) {
         $li.append($button)
         $li.dataset.directory = e;
         return $li;
-    })
-    );
+    }),
+    $button2);
     return $ul;
 }
 
