@@ -69,7 +69,7 @@ a {
 .column {
     flex: 1;
     flex-direction: column;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: linear-gradient(135deg, rgba(150, 150, 150, 0.274), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -80,6 +80,22 @@ a {
     height: 100%;
     overflow-y: auto;
 }
+
+.dkCcolumn {
+    flex: 1;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgba(28, 28, 29, 0.4), rgba(54, 54, 54, 0.2));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /*background-color: #005151;*/
+    padding: 10px;
+    border: 1px solid #00312791;
+    border-radius: 5px;
+    height: 100%;
+    overflow-y: auto;
+}
+
 
 .hidden {
     visibility: hidden;
